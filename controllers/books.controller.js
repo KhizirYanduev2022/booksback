@@ -56,9 +56,13 @@ findAllBooks:(req,res)=>{
         } else{
             res.json(data)
         }
-    })
-}
+    }) 
+},
+
+findSymbol:(req,res)=>{
+   Books.find({genre:req.params.id},(err,data)=>{
+        res.json(data);
+    }).populate('genre')
+} 
 
 }
-
-

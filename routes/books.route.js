@@ -8,5 +8,6 @@ router.delete('/books/:id',booksController.deleteBooks)
 router.put('/books/:id',booksController.updateBooks)
 router.get('/books/:id',booksController.findBooks)
 router.get('/books',booksController.findAllBooks)
+router.get('/books/genre/:id', booksController.findSymbol)
 
 module.exports = router
